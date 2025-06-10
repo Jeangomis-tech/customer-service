@@ -6,8 +6,6 @@ import com.jcg.customer_service.mappers.CustomerMapper;
 import com.jcg.customer_service.models.Customer;
 import com.jcg.customer_service.repositories.CustomerRepository;
 import com.jcg.customer_service.services.CustomerService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,7 +45,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<CustomerResponse> getAllCustomers() {
-        return List.of();
+    public List<Customer> getAllCustomers() {
+
+        return customerRepository.findAll();
     }
 }

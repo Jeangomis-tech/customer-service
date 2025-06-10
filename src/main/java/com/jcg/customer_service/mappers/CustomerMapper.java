@@ -13,6 +13,8 @@ public class CustomerMapper {
         customerResponse.setLastName(customer.getLastName());
         customerResponse.setId(customer.getId());
         customerResponse.setEmail(customer.getEmail());
+        customerResponse.setCreatedAt(customer.getCreatedAt());
+        customerResponse.setUpdatedAt(customer.getUpdatedAt());
         return customerResponse;
     }
     public Customer toEntity(CustomerRequest dto) {
